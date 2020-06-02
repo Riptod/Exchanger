@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Exchanger</title>
+</head>
+<body>
+<h1>Create a Person:</h1>
+
+<form th:action="@{/exchange}"
+      th:object="${inputForm}" method="POST">
+    Short Name:
+    <input type="text" th:field="*{shortName}" />
+    <br/>
+    Value:
+    <input type="text" th:field="*{value}" />
+    <br/>
+    <input type="submit" value="Evaluate" />
+</form>
+<br/>
+    <h2 th:utext="${result}">
+</body>
+</html>

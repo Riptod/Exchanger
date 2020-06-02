@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <table border="1">
+        <tr>
+            <th>Currency Name</th>
+            <th>Short Name</th>
+            <th>Currency Rate</th>
+        </tr>
+        <tr th:each ="currency : ${currencies}">
+            <td th:utext="${currency.txt}">...</td>
+            <td th:utext="${currency.cc}">...</td>
+            <td th:utext="${currency.rate}">...</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
